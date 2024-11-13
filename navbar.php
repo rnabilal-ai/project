@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg bg-dark-subtle">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">SIM</a>
@@ -7,13 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+          <a class="nav-link active" aria-current="page" href="/Maxx/project/index.php">Beranda</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Data Mahasiswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Data Jurusan</a>
+          <a class="nav-link active" aria-current="page" href="/Maxx/project/modul-jurusan/index.php">Data Jurusan</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Data Dosen</a>
