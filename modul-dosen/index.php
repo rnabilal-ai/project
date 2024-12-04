@@ -24,7 +24,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">NO</th>
                         <th scope="col">NIDN</th>
                         <th scope="col">Nama Dosen</th>
                         <th scope="col">Jabatan</th>
