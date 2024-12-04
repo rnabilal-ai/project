@@ -1,14 +1,23 @@
 <?php
+#1. koneksikan file ini
 include("../koneksi.php");
 
-$kd = $_POST['kode'];
-$jrs = $_POST['jurusan'];
+#2. mengambil value dari form
+$nidn = $_POST['nidn'];
+$nama = $_POST['nama'];
+$jabatan = $_POST['jabatan'];
+$email = $_POST['email'];
+$no_hp = $_POST['no_hp'];
 
-$simpan = "INSERT INTO jurusans (kode,jurusan) VALUES ('$kd','$jrs')";
+#3. menulis query
+$simpan = "INSERT INTO dosens (nidn,nama,jabatan,email,no_hp) VALUES ('$nidn','$nama',
+'$jabatan','$email','$no_hp')";
 
-$proses = mysqli_query($koneksi,$simpan);
+#4. jalankan query
+$proses = mysqli_query($koneksi, $simpan);
 
-// header("location.index.php");
+#5. mengalihkan halaman
+// header("location:index.php");
 ?>
 <script>
     document.location="index.php";
