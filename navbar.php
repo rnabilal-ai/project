@@ -11,7 +11,7 @@
           <a class="nav-link active" aria-current="page" href="/Maxx/project/index.php">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Data Mahasiswa</a>
+          <a class="nav-link active" aria-current="page" href="/Maxx/project/modul-mahasiswa/index.php">Data Mahasiswa</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/Maxx/project/modul-jurusan/index.php">Data Jurusan</a>
