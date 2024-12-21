@@ -56,6 +56,12 @@
                         <td><?=$data['jurusan']?></td>
                         <td><?=$data['nm_dos']?></td>
                         <td>
+
+                             <!-- TOMBOL DETAIL -->
+                             <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#detail<?=$data['nim']?>">
+                            <i class="fa-solid fa-eye"></i>
+                            </button>
+                            
                             <a class="btn btn-info btn-sm" href="edit.php?id=<?=$data['id']?>"><i class="fa fa-pen-to-square"></i></a>
                             
                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?=$data['id']?>">
