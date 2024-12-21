@@ -1,4 +1,5 @@
 <?php
+session_start();
 $pesan="";
 if(isset($_POST['tombol'])){
   #1. koneksi database
@@ -14,19 +15,37 @@ if(isset($_POST['tombol'])){
   #4. menjalankan query diatas
   $qry_cek = mysqli_query($koneksi,$sql_cek); 
 
+  
+
   #5. pengecekan lanjutan
   $cek = mysqli_num_rows($qry_cek);
 
   #6. buatkan IF jika login berhasil atau gagal
   if($cek > 0){
     //login berhasil
-    $pesan = '<div class="alert alert-success" role="alert">
-    Login Berhasil,Jangan Coba Lagi!!!
-   </div>';
+    #(OPTIONAL) Mengambil data lain dari tabel users berdasarkan data login
+    $ambil = mysqli_fetch_array($qry_cek);
+    $nama_login = $ambil['nama'];
+    $id_login = $ambil['id'];
+
+    #pembuatan Session
+    $_SESSION['sid'] = $id_login;
+    $_SESSION['semail'] = $email;
+    $_SESSION['snama'] = $nama_login;
+
+    #Pembuatan Cookie
+    if($_POST['cek'] == "yes"){
+        setcookie("cid",$id_login,time()+(60*60*24*90),"/");
+        setcookie("cemail",$email,time()+(60*60*24*90),"/");
+        setcookie("cnama",$nama_login,time()+(60*60*24*90),"/");
+    }
+
+    header("location:index.php");
+
   }else{
     //login gagal
     $pesan = '<div class="alert alert-danger" role="alert">
-   Login Gagal,Coba Lagi!!!
+    <i class="fa-solid fa-triangle-exclamation"></i>Login Gagal,Coba Lagi!!!
   </div>';
   }
 }
@@ -38,6 +57,7 @@ if(isset($_POST['tombol'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project IS62</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
 
@@ -77,5 +97,6 @@ if(isset($_POST['tombol'])){
 
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/all.js"></script>
 </body>
 </html>
