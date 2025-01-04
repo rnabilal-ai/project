@@ -20,6 +20,9 @@
           <a class="nav-link active" aria-current="page" href="/Maxx/project/modul-dosen/index.php">Data Dosen</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/Maxx/project/ubahpass.php">Ubah Password</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/Maxx/project/logout.php">log out</a>
         </li>
       </ul>
