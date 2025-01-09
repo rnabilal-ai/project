@@ -23,7 +23,7 @@ include_once("ceklogin.php");
             </div>
             <div class="card-body">
                 <h4>Selamat Datang, User</h4>
-                <p>Kata-kata hari ini</p>
+                <p>coba aja untuk sesuka hatii</p>
             </div>
             </div>
         </div>

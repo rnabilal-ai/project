@@ -31,7 +31,7 @@ if(isset($_POST['tombol'])){
  }else{
     #proses ubah
     $sql_ubah = "UPDATE users SET password='$pass2' WHERE id='$login_id'";
-    $qry_ubah = mysqli_query($koneksi,$dql_ubah);
+    $qry_ubah = mysqli_query($koneksi,$sql_ubah);
 
     #kalau mau langsung log out
     //header("location:logout.php");
